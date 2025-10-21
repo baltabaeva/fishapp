@@ -1,0 +1,10 @@
+{
+  "name": "Ежедневник рыбака",
+  "short_name": "Рыбак",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E0F2FE",
+  "description": "Простой ежедневник для учета улова, продаж и расходов.",
+  "icons": []
+}

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slateDark font-sans antialiased leading-relaxed;
+    background-color: #F9FAFB; /* спокойный светлый фон */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Контейнер приложения в центре */
+  .app-container { @apply max-w-[440px] mx-auto px-4 py-6; }
+
+  /* Универсальная карточка */
+  .card { @apply bg-white rounded-2xl p-5 mb-5 shadow-[0_10px_24px_rgba(2,6,23,0.06)]; }
+
+  /* Кнопки по гайдлайну */
+  .btn { @apply inline-flex items-center justify-center h-10 rounded-full border border-[#E2E8F0] bg-blue-50 text-blue-600 font-medium px-4 shadow-sm transition-all duration-150 ease-in-out hover:bg-blue-100 whitespace-nowrap; }
+  .btn-lg { @apply h-12 px-5 text-[15px]; }
+  .btn-primary { @apply bg-blue-500 text-white hover:bg-blue-600 border-transparent shadow-none; }
+  .btn-secondary { @apply inline-flex items-center justify-center h-10 rounded-2xl border border-[#E2E8F0] bg-white text-slate-700 font-medium px-4 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50; }
+
+  /* Поля ввода */
+  .input { @apply rounded-2xl border border-[#E2E8F0] bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300; }
+  .input-pill { @apply h-10 rounded-full; }
+  .input-round { @apply h-11 rounded-full; }
+  .input-xl { @apply h-12 rounded-xl; }
+  .input-ghost { @apply bg-transparent border-0 shadow-none focus:outline-none focus:ring-0 px-3 py-2; }
+
+  /* Заголовки секций */
+  .section-title { @apply font-semibold text-gray-800 mb-2; }
+
+  /* Иконки по baseline */
+  .icon-inline { @apply inline-flex items-center align-baseline; }
+
+  /* Сегментированный контейнер (дата + кнопки) */
+  .seg { @apply bg-white rounded-full border border-[#E2E8F0] shadow-[0_6px_16px_rgba(2,6,23,0.06)] px-3 py-2 w-full max-w-full overflow-hidden; }
+}
+
+/* Лёгкая анимация появления */
+@keyframes fadeIn { from { opacity: .0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.animate-fadeIn { animation: fadeIn .25s ease-in-out both; }
